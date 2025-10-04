@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background: #f0f9ff;
   --foreground: #171717;
+  --snake-head: #16a34a;    /* green-600 */
+  --snake-body: #22c55e;    /* green-500 */
+  --snake-body-2: #4ade80;  /* green-400 */
+  --food: #ef4444;          /* red-500 */
 }
 
 @theme inline {
@@ -16,6 +20,10 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --snake-head: #22c55e;    /* green-500 */
+    --snake-body: #4ade80;    /* green-400 */
+    --snake-body-2: #86efac;  /* green-300 */
+    --food: #f87171;          /* red-400 */
   }
 }
 
@@ -23,4 +31,30 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* 自定义滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* 游戏网格背景 */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
 }
